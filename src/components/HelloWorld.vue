@@ -1,122 +1,61 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br />
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
-        >vue-cli documentation</a
-      >.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
-          target="_blank"
-          rel="noopener"
-          >babel</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router"
-          target="_blank"
-          rel="noopener"
-          >router</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint"
-          target="_blank"
-          rel="noopener"
-          >eslint</a
-        >
-      </li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li>
-        <a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a>
-      </li>
-      <li>
-        <a href="https://forum.vuejs.org" target="_blank" rel="noopener"
-          >Forum</a
-        >
-      </li>
-      <li>
-        <a href="https://chat.vuejs.org" target="_blank" rel="noopener"
-          >Community Chat</a
-        >
-      </li>
-      <li>
-        <a href="https://twitter.com/vuejs" target="_blank" rel="noopener"
-          >Twitter</a
-        >
-      </li>
-      <li>
-        <a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a>
-      </li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li>
-        <a href="https://router.vuejs.org" target="_blank" rel="noopener"
-          >vue-router</a
-        >
-      </li>
-      <li>
-        <a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-devtools#vue-devtools"
-          target="_blank"
-          rel="noopener"
-          >vue-devtools</a
-        >
-      </li>
-      <li>
-        <a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener"
-          >vue-loader</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-          rel="noopener"
-          >awesome-vue</a
-        >
-      </li>
-    </ul>
-  </div>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <a href="#">Login</a>
+    </div>
+
+    <div class="navbar-logo">
+      <!-- Substituir o caminho pelo URL fornecido -->
+      <img
+        src="https://cdn.discordapp.com/attachments/976322101818560562/1158913896795623505/logo.png?ex=651dfa2c&is=651ca8ac&hm=14a7268314f50c22520bfcf135d86bfa43f2a048cad5649b27d23dabb0c9d6c8"
+        alt="Logo"
+      />
+    </div>
+
+    <div class="navbar-right">
+      <a href="#">Carrinho</a>
+    </div>
+  </nav>
 </template>
 
-<script>
-export default {
-  name: "HelloWorld",
-  props: {
-    msg: String,
-  },
-};
-</script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+/* Em styles.css ou styles.scss */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ececec;
+  height: 90px;
+  color: black;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+.navbar-logo {
+  flex: 1;
+  text-align: center;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+
+.navbar-logo img {
+  max-width: 120px;
 }
-a {
-  color: #42b983;
+
+.navbar-left,
+.navbar-right {
+  flex: 1;
+  text-align: center;
+}
+
+.navbar-left a,
+.navbar-right a {
+  color: black;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+}
+
+.navbar-left a:hover,
+.navbar-right a:hover {
+  text-decoration: underline;
 }
 </style>
