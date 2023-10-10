@@ -9,8 +9,9 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "vue": "^3.2.13",
+    "vue": "^3.3.4",
     "vue-awesome-swiper": "^5.0.1",
+    "vue-carousel": "^0.18.0",
     "vue-router": "^4.0.3"
   },
   "devDependencies": {
