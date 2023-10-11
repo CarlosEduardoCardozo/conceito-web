@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar">
     <div class="navbar-left">
-      <a href="#">Logout</a>
+      <a href="#">Login</a>
     </div>
 
     <div class="navbar-logo">

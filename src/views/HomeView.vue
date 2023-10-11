@@ -16,7 +16,5 @@ export default {
     <HelloWorld />
     <Navbar />
     <ProductGrid />
-    <ProductGrid />
-    <ProductGrid />
   </div>
 </template>
