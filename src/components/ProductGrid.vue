@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h2>oi</h2>
     <div class="product-grid">
       <div
         class="product-card"

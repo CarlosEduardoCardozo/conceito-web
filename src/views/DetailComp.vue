@@ -20,34 +20,37 @@ export default {
 };
 </script>
 <template>
-  <HelloWorld />
-  <div class="product-detail">
-    <div class="product-image">
-      <img
-        src="https://cdn.awsli.com.br/1347/1347698/produto/224865057/joker-suf-gang-preto-frente-n6les101s8.jpg"
-        alt="Nome do Produto"
-      />
-    </div>
-    <div class="product-info">
-      <h2>Calça Jeans Carpenter Joker Blue</h2>
-      <p class="price">R$ 159,90</p>
-      <p class="description">
-        Esta é uma descrição detalhada do produto. Aqui você pode incluir
-        informações sobre o material, tamanho, estilo e outros detalhes
-        relevantes.
-      </p>
-      <label>Tamanho:</label>
-      <div class="size-buttons">
-        <button
-          v-for="size in availableSizes"
-          :key="size"
-          @click="selectSize(size)"
-          :class="{ selected: selectedSize === size }"
-        >
-          {{ size }}
-        </button>
+  <div>
+    <HelloWorld />
+    <div class="product-detail">
+      <div class="product-image">
+        <img
+          src="https://cdn.awsli.com.br/1347/1347698/produto/224865057/joker-suf-gang-preto-frente-n6les101s8.jpg"
+          alt="Nome do Produto"
+        />
       </div>
-      <button @click="addToCart">Adicionar ao Carrinho</button>
+      <div class="product-info">
+        <h2>Calça Jeans Carpenter Joker Blue</h2>
+        <p class="price">R$ 159,90</p>
+        <p class="description">
+          Esta é uma descrição detalhada do produto. Aqui você pode incluir
+          informações sobre o material, tamanho, estilo e outros detalhes
+          relevantes.
+        </p>
+        <label>Tamanho:</label>
+        <div class="size-buttons">
+          <button
+            v-for="size in availableSizes"
+            :key="size"
+            @click="selectSize(size)"
+            :class="{ selected: selectedSize === size }"
+          >
+            {{ size }}
+          </button>
+        </div>
+        <button @click="addToCart">Adicionar ao Carrinho</button>
+        <button class="buy-button" @click="addToCart">Comprar Agora</button>
+      </div>
     </div>
   </div>
 </template>
@@ -100,6 +103,27 @@ button {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  margin: 5px;
+}
+
+.size-buttons {
+  margin: 5px;
+  opacity: 0.5;
+}
+
+.buy-button {
+  background: #ff8c00; /* Cor de fundo do botão de compra (exemplo: laranja) */
+  color: #fff; /* Cor do texto do botão de compra */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px; /* Espaçamento superior para separá-lo dos botões de tamanho */
+}
+
+.buy-button:hover {
+  background: #ff6a00; /* Cor de fundo do botão de compra no hover */
 }
 
 button:hover {
